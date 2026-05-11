@@ -1,0 +1,1 @@
+class r extends Error{constructor(r){super(`Provider path not found: ${r}`),this.path=r,this.name="ProviderNotFoundError"}}class s extends Error{constructor(r="Provider auth required"){super(r),this.name="ProviderAuthError"}}class t extends Error{constructor(r,s){super(r),this.statusCode=s,this.name="ProviderTransientError"}}export{r as P,t as a,s as b};
