@@ -10,7 +10,12 @@
          silently ignored by iOS Safari (we keep it for Android; iOS
          honors `maximum-scale=1.0` directly). Accessibility tradeoff
          accepted — Mitora's typography already meets readable sizes. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Sprint 63 P5b: viewport-fit=cover is REQUIRED for `env(safe-area-inset-*)`
+         to report non-zero values inside the Capacitor WKWebView (BS-9 root
+         cause: M hamburger collided with iOS status bar because no inset was
+         applied). PWA standalone mode enables this implicitly; the Capacitor
+         WebView does not, so we set it explicitly here. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Mitora</title>
     <meta name="description" content="A personal radar for the threads of fluid, high-stakes work." />
     <meta name="theme-color" content="#18181b" />
@@ -33,8 +38,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <script type="module" crossorigin src="/assets/index-CotzuZDt.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CR0bb01a.css">
+    <script type="module" crossorigin src="/assets/index-B8W6_akE.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Wx0tqu-i.css">
   <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
   <body class="bg-surface dark:bg-surface-dark text-zinc-900 dark:text-zinc-100 font-sans antialiased">
     <div id="root"></div>
